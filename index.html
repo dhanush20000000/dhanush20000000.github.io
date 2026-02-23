@@ -1,201 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Dhanush P | Full Stack Developer</title>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;scroll-behavior:smooth}
-body{background:#0f172a;color:#fff}
-
-/* HERO */
-.hero{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
-text-align:center;
-background:linear-gradient(135deg,#1e293b,#0f172a);
-padding:0 20px;
-}
-.hero h1{font-size:3rem}
-.hero span{color:#38bdf8}
-.typing{margin-top:10px;font-size:1.2rem;color:#94a3b8}
-.btn{
-margin-top:25px;
-padding:12px 30px;
-border:none;
-background:#38bdf8;
-color:#0f172a;
-font-weight:600;
-border-radius:30px;
-cursor:pointer;
-text-decoration:none;
-transition:0.3s;
-display:inline-block;
-}
-.btn:hover{background:#0ea5e9}
-
-/* SECTION */
-section{padding:100px 8%}
-h2{text-align:center;margin-bottom:40px;color:#38bdf8;font-size:2rem}
-
-/* ABOUT */
-.about-container{max-width:800px;margin:auto;text-align:center}
-
-/* SKILLS */
-.skill{margin:15px 0}
-.progress{
-background:#1e293b;
-border-radius:20px;
-overflow:hidden;
-}
-.progress-bar{
-height:10px;
-background:#38bdf8;
-width:0;
-transition:width 2s ease;
-}
-
-/* PROJECTS */
-.card-container{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
-gap:20px;
-}
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-transition:0.4s;
-}
-.card:hover{
-transform:translateY(-8px);
-background:#334155;
-}
-
-/* CONTACT */
-form{
-max-width:500px;
-margin:auto;
-display:flex;
-flex-direction:column;
-gap:15px;
-}
-input,textarea{
-padding:12px;
-border:none;
-border-radius:6px;
-}
-
-/* FOOTER */
-footer{
-text-align:center;
-padding:20px;
-background:#1e293b;
-color:#94a3b8;
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Index</title>
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-
 <body>
-
-
-
-<div class="hero">
-<h1>Hi, I'm <span>Dhanush P</span></h1>
-<div class="typing" id="typing"></div>
-<a href="resume.pdf" class="btn" download>Download Resume</a>
-</div>
-
-<section id="about">
-<h2>About Me</h2>
-<div class="about-container">
-<p>
-B.Tech CSBS student from K.S.R College (Affiliated to Anna University).
-Passionate Full Stack Developer and AI Enthusiast focused on building scalable web applications and automation solutions.
-</p>
-</div>
-</section>
-
-<section id="skills">
-<h2>Technical Skills</h2>
-
-<div class="skill">Java<div class="progress"><div class="progress-bar" data-width="85%"></div></div></div>
-<div class="skill">Python<div class="progress"><div class="progress-bar" data-width="80%"></div></div></div>
-<div class="skill">React<div class="progress"><div class="progress-bar" data-width="75%"></div></div></div>
-<div class="skill">Node.js<div class="progress"><div class="progress-bar" data-width="75%"></div></div></div>
-<div class="skill">MongoDB<div class="progress"><div class="progress-bar" data-width="70%"></div></div></div>
-
-</section>
-
-<section id="projects">
-<h2>Projects</h2>
-<div class="card-container">
-
-<div class="card">
-<h3>Online Stationery Shop</h3>
-<p>MERN stack e-commerce application with authentication and cart system.</p>
-<a href="https://github.com/dhanush20000000" class="btn">View Code</a>
-</div>
-
-<div class="card">
-<h3>Sign Language Translator</h3>
-<p>Computer Vision based ML project converting gestures to text.</p>
-<a href="https://github.com/dhanush20000000" class="btn">View Code</a>
-</div>
-
-<div class="card">
-<h3>File Format Converter (RPA)</h3>
-<p>Automation solution developed using UiPath.</p>
-<a href="https://github.com/dhanush20000000" class="btn">View Code</a>
-</div>
-
-</div>
-</section>
-
-<section id="contact">
-<h2>Contact Me</h2>
-<form>
-<input type="text" placeholder="Your Name">
-<input type="email" placeholder="Your Email">
-<textarea rows="5" placeholder="Your Message"></textarea>
-<button class="btn">Send Message</button>
-</form>
-</section>
-
-<footer>
-© 2026 Dhanush P | Full Stack Developer
-</footer>
-
-<script>
-// Typing animation
-const roles=["Full Stack Developer","Aquatist","MERN Developer"];
-let count=0,index=0,currentText="",letter="";
-(function type(){
-if(count===roles.length){count=0}
-currentText=roles[count];
-letter=currentText.slice(0,++index);
-document.getElementById("typing").textContent=letter;
-if(letter.length===currentText.length){
-count++;index=0;setTimeout(type,1000)
-}else{setTimeout(type,100)}
-})();
-
-// Skill animation on scroll
-const bars=document.querySelectorAll(".progress-bar");
-window.addEventListener("scroll",()=>{
-bars.forEach(bar=>{
-const rect=bar.getBoundingClientRect();
-if(rect.top<window.innerHeight){
-bar.style.width=bar.getAttribute("data-width");
-}
-});
-});
-</script>
-
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="#">Navbar</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Features</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Pricing</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </body>
 </html>
