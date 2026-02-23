@@ -3,129 +3,163 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
     <title>Portfolio</title>
     <style>
         body {
-            background-color: #0f172a;
-            color: white;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(45deg, lightblue, white);
+            color: #333;
         }
-        .progress-bar {
-            background-color: #38bdf8;
+        #hero {
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            background-color: navy;
+            color: white;
+            text-align: center;
+        }
+        .progress {
+            height: 30px;
+        }
+        footer {
+            background-color: navy;
+            color: white;
+            text-align: center;
+            padding: 20px;
         }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">My Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasExample" aria-labelledby="offcanvasExampleLabel">
-                <div class="offcanvas-header">
-                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">Menu</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </nav>
-    <div id="home" class="hero text-center">
-        <h1>Welcome to My Portfolio</h1>
-        <h2 class="typing-animation">I am a <span class="typing"></span></h2>
-        <script>
-            const words = ["Full Stack Developer", "Aquatist", "MERN Developer"];
-            let index = 0;
-            let currentWord = 0;
-            function type() {
-                const typingElement = document.querySelector('.typing');
-                typingElement.textContent = words[currentWord].slice(0, index++);
-                if (index > words[currentWord].length) {
-                    index = 0;
-                    currentWord++;
-                    if (currentWord >= words.length) {
-                        currentWord = 0;
-                    }
-                }
-            }
-            setInterval(type, 200);
-        </script>
+
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="#">My Portfolio</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#projects">Projects</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact">Contact</a>
+            </li>
+        </ul>
     </div>
-    <section id="about" class="container mt-5">
-        <h2>About Me</h2>
-        <p>A passionate developer with a flair for creativity and problem-solving.</p>
-    </section>
-    <section id="skills" class="container mt-5">
-        <h2>Technical Skills</h2>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 85%">Java 85%</div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 80%">Python 80%</div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%">React 75%</div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 75%">Node.js 75%</div>
-        </div>
-        <div class="progress">
-            <div class="progress-bar" role="progressbar" style="width: 70%">MongoDB 70%</div>
-        </div>
-    </section>
-    <section id="projects" class="container mt-5">
-        <h2>Projects</h2>
-        <div class="card-group">
+</nav>
+
+<!-- Hero Section -->
+<div id="hero">
+    <h1>Welcome to My Portfolio</h1>
+    <h2>Frontend Developer</h2>
+    <p class="typing-animation">I create beautiful and functional web applications.</p>
+</div>
+
+<!-- About Section -->
+<div id="about" class="container my-5">
+    <h2>About Me</h2>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus. Sed sit amet ipsum mauris.</p>
+</div>
+
+<!-- Skills Section -->
+<div id="skills" class="container my-5">
+    <h2>My Skills</h2>
+    <div class="progress">
+        <div class="progress-bar bg-success" style="width: 90%;">HTML</div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-info" style="width: 80%;">CSS</div>
+    </div>
+    <div class="progress">
+        <div class="progress-bar bg-warning" style="width: 75%;">JavaScript</div>
+    </div>
+</div>
+
+<!-- Projects Showcase -->
+<div id="projects" class="container my-5">
+    <h2>My Projects</h2>
+    <div class="row">
+        <div class="col-md-4">
             <div class="card">
+                <img src="project1.jpg" class="card-img-top" alt="Project 1">
                 <div class="card-body">
-                    <h5 class="card-title">Online Stationery Shop</h5>
-                    <p class="card-text">An online shop for stationery.</p>
+                    <h5 class="card-title">Project 1</h5>
+                    <p class="card-text">Description of project 1.</p>
                 </div>
             </div>
+        </div>
+        <div class="col-md-4">
             <div class="card">
+                <img src="project2.jpg" class="card-img-top" alt="Project 2">
                 <div class="card-body">
-                    <h5 class="card-title">Sign Language Translator</h5>
-                    <p class="card-text">A tool to translate spoken languages into sign language.</p>
-                </div>
-            </div>
-            <div class="card">
-                <div class="card-body">
-                    <h5 class="card-title">File Format Converter</h5>
-                    <p class="card-text">A web app to convert files from one format to another.</p>
+                    <h5 class="card-title">Project 2</h5>
+                    <p class="card-text">Description of project 2.</p>
                 </div>
             </div>
         </div>
-    </section>
-    <section id="contact" class="container mt-5">
-        <h2>Contact Me</h2>
-        <form>
-            <div class="mb-3">
-                <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" required>
+        <div class="col-md-4">
+            <div class="card">
+                <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                <div class="card-body">
+                    <h5 class="card-title">Project 3</h5>
+                    <p class="card-text">Description of project 3.</p>
+                </div>
             </div>
-            <div class="mb-3">
-                <label for="email" class="form-label">Email</label>
-                <input type="email" class="form-control" id="email" required>
-            </div>
-            <div class="mb-3">
-                <label for="message" class="form-label">Message</label>
-                <textarea class="form-control" id="message" rows="3" required></textarea>
-            </div>
-            <button type="submit" class="btn btn-primary">Send Message</button>
-        </form>
-    </section>
-    <footer class="mt-5 text-center">
-        <p>© 2026 My Portfolio. All Rights Reserved.</p>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        </div>
+    </div>
+</div>
+
+<!-- Contact Form -->
+<div id="contact" class="container my-5">
+    <h2>Contact Me</h2>
+    <form>
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" id="name" required>
+        </div>
+        <div class="form-group">
+            <label for="email">Email:</label>
+            <input type="email" class="form-control" id="email" required>
+        </div>
+        <div class="form-group">
+            <label for="message">Message:</label>
+            <textarea class="form-control" id="message" required></textarea>
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    </form>
+</div>
+
+<!-- Footer -->
+<footer>
+    <p>&copy; 2026 My Portfolio</p>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        // Typing animation
+        const text = 'I create beautiful and functional web applications.';
+        let index = 0;
+        const typingAnimation = () => {
+            if (index < text.length) {
+                document.querySelector('.typing-animation').textContent += text.charAt(index);
+                index++;
+                setTimeout(typingAnimation, 100);
+            }
+        };
+        typingAnimation();
+    });
+</script>
 </body>
 </html>
